@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.coxey.app.model" />
+
+    <bean id="studentArtem"
+          class="com.coxey.app.model.Student">
+        <constructor-arg value="Artem" />
+        <constructor-arg>
+            <map>
+                <entry key="Math" value="2.0"/>
+                <entry key="Russian language" value="5.0"/>
+                <entry key="Physics" value="3.0"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="studentDanil"
+          class="com.coxey.app.model.Student">
+        <constructor-arg value="Danil" />
+        <constructor-arg>
+            <map>
+                <entry key="Math" value="1.0"/>
+                <entry key="Russian language" value="1.0"/>
+                <entry key="Physics" value="1.0"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="studentJil"
+          class="com.coxey.app.model.Student">
+        <constructor-arg value="Jil" />
+        <constructor-arg>
+            <map>
+                <entry key="Math" value="2.0"/>
+                <entry key="Russian language" value="1.0"/>
+                <entry key="Physics" value="1.0"/>
+            </map>
+        </constructor-arg>
+    </bean>
+    <bean class="com.coxey.app.configuration.PostProcessor"/>
+
+</beans>
