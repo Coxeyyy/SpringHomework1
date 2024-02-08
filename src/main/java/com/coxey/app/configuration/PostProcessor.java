@@ -4,9 +4,6 @@ import com.coxey.app.model.Student;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 
 public class PostProcessor implements BeanPostProcessor {
     @Override
@@ -14,11 +11,7 @@ public class PostProcessor implements BeanPostProcessor {
         if (bean instanceof Student) {
             Student student = (Student) bean;
             if (student.getName().equals("Jil")) {
-                Map<String, Double> grades = new LinkedHashMap<>();
-                for (var temp : student.getGrades().keySet()) {
-                    grades.put(temp, 3.0);
-                }
-                student.setGrades(grades);
+                student.getGrades().replaceAll((key, grade) -> grade + 3.0);
             }
         }
         return bean;
