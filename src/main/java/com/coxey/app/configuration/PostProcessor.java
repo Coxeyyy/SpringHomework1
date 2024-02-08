@@ -3,12 +3,11 @@ package com.coxey.app.configuration;
 import com.coxey.app.model.Student;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-@Component
+
 public class PostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -21,7 +20,7 @@ public class PostProcessor implements BeanPostProcessor {
                 }
                 student.setGrades(grades);
             }
-        } // Хочу попытаться переделать на стримы
+        }
         return bean;
     }
 }

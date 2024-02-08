@@ -70,14 +70,5 @@ public class Student {
         if (sumGrades >= 3.0) {
             ifEnrolled = true;
         }
-        /*Optional<Double> sumGrades = grades.values().stream()
-                .reduce((x, y) -> x + y);
-        if(sumGrades.isPresent()) { // Хочу попытаться переделать чтобы все работало с помощью stream, но пока не знаю как
-            double sum = sumGrades.get();
-            sum /= grades.values().size();
-            if (sum >= 3.0) {
-                ifEnrolled = true;
-            }
-        }*/
     }
 }

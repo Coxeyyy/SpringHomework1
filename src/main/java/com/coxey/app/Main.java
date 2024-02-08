@@ -1,7 +1,6 @@
 package com.coxey.app;
 
 import com.coxey.app.configuration.ConfigSecondContext;
-import com.coxey.app.model.Student;
 import com.coxey.app.model.Teacher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -2,11 +2,13 @@ package com.coxey.app.configuration;
 
 import com.coxey.app.model.Student;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
 @Configuration
+@ComponentScan("com.coxey.app.model")
 public class ConfigSecondContext {
     @Bean
     public Student studentArtem2() {
